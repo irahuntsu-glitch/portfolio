@@ -84,5 +84,6 @@
         "/media/event-02.png"
       ]
     }
-  ]
+  ],
+  "placeholders": true
 }

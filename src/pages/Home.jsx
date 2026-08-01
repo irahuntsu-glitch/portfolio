@@ -41,8 +41,8 @@ export default function Home() {
         <main>
           <section className="cases">
             <div className="cases__grid">
-              {allCases.map((c) => (
-                <CaseCard key={c.slug} item={c} />
+              {allCases.map((c, i) => (
+                <CaseCard key={c.slug} item={c} index={i} />
               ))}
             </div>
           </section>

@@ -4,7 +4,7 @@ import Sidebar from "../components/Sidebar.jsx"
 import CaseCard from "../components/CaseCard.jsx"
 import NotFound from "./NotFound.jsx"
 import { gsap, useGsap, clipReveal, parallax, reducedMotion, EASE } from "../lib/anim.js"
-import { asset, rebaseHtml, getCase, otherCases, siteContent } from "../lib/content.js"
+import { asset, rebaseHtml, getCase, otherCases, siteContent, placeholders } from "../lib/content.js"
 
 export default function CasePage() {
   const { slug } = useParams()
@@ -72,7 +72,7 @@ export default function CasePage() {
 
           {item.cover ? (
             <div className="cs__hero">
-              <img src={asset(item.cover)} alt={item.title} />
+              {placeholders ? <div className="ph" /> : <img src={asset(item.cover)} alt={item.title} />}
             </div>
           ) : null}
 

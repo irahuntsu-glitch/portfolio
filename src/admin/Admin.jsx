@@ -14,6 +14,7 @@ import {
   REPO,
 } from "./github.js"
 import { asset } from "../lib/content.js"
+import { slotHint } from "../lib/bento.js"
 import "./admin.css"
 
 const SITE_PATH = "content/site.json"
@@ -294,6 +295,7 @@ export default function Admin() {
           ) : (
             <CaseEditor
               item={cases[editing]}
+              index={editing}
               onChange={(patch) => updateCases((c) => Object.assign(c[editing], patch))}
               onBack={() => setEditing(null)}
               pickImage={pickImage}
@@ -581,7 +583,8 @@ function CaseList({ cases, updateCases, setEditing }) {
         <div>
           <h3>Кейсы</h3>
           <p className="ad__hint" style={{ margin: 0 }}>
-            Порядок в списке — порядок на главной.
+            Порядок в списке задаёт размер карточки на главной. Следующий кейс встанет в слот{" "}
+            <b>{slotHint(cases.length)}</b>.
           </p>
         </div>
         <button
@@ -604,7 +607,7 @@ function CaseList({ cases, updateCases, setEditing }) {
           )}
           <span className="ad__case-t">
             <b>{c.title || "Без названия"}</b>
-            <span>{c.tagline || c.slug}</span>
+            <span>обложка: {slotHint(i)}</span>
           </span>
           {c.draft ? <span className="ad__draft">черновик</span> : null}
           <button className="ad__btn ad__btn--sm" onClick={() => move(i, -1)} disabled={i === 0}>
@@ -638,7 +641,7 @@ function CaseList({ cases, updateCases, setEditing }) {
 
 /* ====================================================================== */
 
-function CaseEditor({ item, onChange, onBack, pickImage }) {
+function CaseEditor({ item, index, onChange, onBack, pickImage }) {
   return (
     <>
       <div className="ad__card">
@@ -686,7 +689,7 @@ function CaseEditor({ item, onChange, onBack, pickImage }) {
         </div>
 
         <div className="ad__f">
-          <span>Обложка</span>
+          <span>Обложка — {slotHint(index)}</span>
           <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
             {item.cover ? (
               <img

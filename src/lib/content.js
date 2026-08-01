@@ -14,10 +14,21 @@ export function asset(path) {
   return BASE.replace(/\/$/, "") + "/" + path.replace(/^\//, "")
 }
 
+/**
+ * While `placeholders` is on, every photo renders as a grey block instead.
+ * Paths stay in the content files, so flipping the flag back in site.json
+ * restores the real images.
+ */
+export const placeholders = site.placeholders === true
+
+const BLANK = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+
 /** Rewrites src/href attributes inside CMS rich text to respect the base path. */
 export function rebaseHtml(html) {
   if (!html) return ""
-  return html.replace(/(src|href)="\/(?!\/)/g, (_m, attr) => `${attr}="${BASE}`)
+  const based = html.replace(/(src|href)="\/(?!\/)/g, (_m, attr) => `${attr}="${BASE}`)
+  if (!placeholders) return based
+  return based.replace(/<img\b[^>]*>/g, `<img src="${BLANK}" alt="" class="is-ph">`)
 }
 
 export const siteContent = site
