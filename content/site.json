@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "Ира Присячева — продуктовый дизайнер",
+    "description": "Портфолио продуктового дизайнера. Финтех, фудтех, web3, b2c и b2b."
+  },
+  "profile": {
+    "name": "Ира Присячева",
+    "avatar": "/media/avatar.png"
+  },
+  "links": [
+    {
+      "label": "Открыть CV",
+      "url": "https://drive.google.com/file/d/1XUa-APO_ziFHKWrCO7o7ck-ZW1LB1Bg_/view?usp=sharing"
+    },
+    {
+      "label": "Телеграм",
+      "url": "https://t.me/irahunt"
+    }
+  ],
+  "intro": {
+    "headline": "Привет! Я Присячева Ира, мне 24 года и сейчас я продуктовый миддл дизайнер в проекте Альфа банка",
+    "subline": "Обожаю исследовать, фотографирую на пленку и безумно люблю путешествовать",
+    "tags": "fintech • foodtech • web3 • b2c • b2b"
+  },
+  "sections": [
+    {
+      "id": "film",
+      "layout": "marquee",
+      "statement": "Мне нравится находить вдохновение в самых обычных моментах. Особенно — фотографировать свои путешествия и будни на плёнку. Потому что плёнка — это всегда про искренность: один кадр, один момент, который невозможно переснять идеально",
+      "images": [
+        "/media/film-01.jpg",
+        "/media/film-02.jpg",
+        "/media/film-03.png",
+        "/media/film-04.jpg",
+        "/media/film-05.png",
+        "/media/film-06.jpg",
+        "/media/film-07.jpg",
+        "/media/film-08.jpg",
+        "/media/film-09.png",
+        "/media/film-10.png",
+        "/media/film-11.png",
+        "/media/film-12.png",
+        "/media/film-13.png",
+        "/media/film-14.jpg"
+      ]
+    },
+    {
+      "id": "posters",
+      "layout": "marquee",
+      "statement": "Также люблю рисовать плакаты, искать свой стиль и по-своему передавать тексты песен через рисунки. В этом я нахожу одновременно спокойствие и внутренний бунт — свою форму творчества",
+      "images": [
+        "/media/poster-01.png",
+        "/media/poster-02.png",
+        "/media/poster-03.png",
+        "/media/poster-04.png",
+        "/media/poster-05.png",
+        "/media/poster-06.png",
+        "/media/poster-07.png",
+        "/media/poster-08.png",
+        "/media/poster-09.png",
+        "/media/poster-10.png",
+        "/media/poster-11.png",
+        "/media/poster-12.png",
+        "/media/poster-13.png",
+        "/media/poster-14.png",
+        "/media/poster-15.png",
+        "/media/poster-16.png",
+        "/media/poster-17.png",
+        "/media/poster-18.png",
+        "/media/poster-19.png",
+        "/media/poster-20.png",
+        "/media/poster-21.png",
+        "/media/poster-22.png",
+        "/media/poster-23.png",
+        "/media/poster-24.png"
+      ]
+    },
+    {
+      "id": "events",
+      "layout": "grid",
+      "statement": "Также стараюсь чаще посещать разные мероприятия и участвовать в конкурсах — это помогает мне вдохновляться, пробовать новое и развиваться :)",
+      "images": [
+        "/media/event-01.png",
+        "/media/event-02.png"
+      ]
+    }
+  ]
+}
